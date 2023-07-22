@@ -48,64 +48,33 @@ class MyApp extends StatelessWidget {
           onPressed: () {},
           child: Icon(Icons.add),
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                margin: EdgeInsets.only(bottom: 20),
-                height: 300,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.blue),
-                child: Text('data'),
+        body: Container(
+          color: Colors.black,
+          height: 300,
+          child: Row(children: [
+            Expanded(
+              child: Container(
+                color: Colors.amber,
+                height: 120,
+                width: 120,
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(children: [
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 8),
-                    width: 300,
-                    height: 300,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue),
-                    child: Text('data'),
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 8),
-                    width: 300,
-                    height: 300,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue),
-                    child: Text('data'),
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 8),
-                    width: 300,
-                    height: 300,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue),
-                    child: Text('data'),
-                  ),
-                ]),
+            ),
+            Expanded(
+              flex: 2,
+              child: Container(
+                color: Colors.blue,
+                height: 120,
+                width: 120,
               ),
-              Container(
-                margin: EdgeInsets.only(bottom: 20, top: 20),
-                height: 300,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.blue),
-                child: Text('data'),
-              )
-            ],
-          ),
+            ),
+            Expanded(
+              child: Container(
+                color: Colors.red,
+                height: 120,
+                width: 120,
+              ),
+            ),
+          ]),
         ),
       ),
     );
