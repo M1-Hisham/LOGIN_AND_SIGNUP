@@ -50,57 +50,70 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Container(
-            padding: EdgeInsets.all(40),
+            padding: EdgeInsets.all(90),
             width: 400,
             height: 600,
             color: Colors.black,
-            child: Stack(children: [
-              Positioned(
-                bottom: 0,
-                right: 0,
-                child: Container(
-                  color: Colors.green,
-                  width: 150,
-                  height: 190,
-                ),
-              ),
-              Positioned(
-                top: 0,
-                left: 0,
-                child: Container(
-                  color: Colors.teal,
-                  width: 150,
-                  height: 190,
-                ),
-              ),
-              Positioned(
-                left: 0,
-                bottom: 0,
-                child: Container(
-                  color: Colors.white,
-                  width: 150,
-                  height: 190,
-                ),
-              ),
-              Positioned(
-                right: 0,
-                top: 0,
-                child: Container(
-                  color: Colors.amber,
-                  width: 150,
-                  height: 190,
-                ),
-              ),
-              Positioned(
-                child: Center(
-                  child: Container(
-                    color: Colors.blue,
-                    width: 150,
-                    height: 190,
-                  ),
-                ),
-              ),
-            ]),
+            child: Center(
+              child: Wrap(
+                  spacing: 20,
+                  runSpacing: 10,
+                  direction: Axis.vertical,
+                  alignment: WrapAlignment.start,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        print('object1');
+                      },
+                      child: Text('data1'),
+                    ),
+                    ElevatedButton(
+                        onPressed: () {
+                          print('object2');
+                        },
+                        child: Text('data2')),
+                    ElevatedButton(
+                        onPressed: () {
+                          print('object3');
+                        },
+                        child: Text('data3')),
+                    ElevatedButton(
+                        onPressed: () {
+                          print('object4');
+                        },
+                        child: Text('data4')),
+                    ElevatedButton(
+                        onPressed: () {
+                          print('object5');
+                        },
+                        child: Text('data5')),
+                    ElevatedButton(
+                        onPressed: () {
+                          print('object6');
+                        },
+                        child: Text('data6')),
+                    ElevatedButton(
+                        onPressed: () {
+                          print('object6');
+                        },
+                        child: Text('data6')),
+                    ElevatedButton(
+                        onPressed: () {
+                          print('object6');
+                        },
+                        child: Text('data6')),
+                    ElevatedButton(
+                        onPressed: () {
+                          print('object6');
+                        },
+                        child: Text('data6')),
+                    ElevatedButton(
+                        onPressed: () {
+                          print('object6');
+                        },
+                        child: Text('data6')),
+                  ]),
+            ),
           ),
         ),
       ),
