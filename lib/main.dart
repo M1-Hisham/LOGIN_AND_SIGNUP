@@ -48,33 +48,60 @@ class MyApp extends StatelessWidget {
           onPressed: () {},
           child: Icon(Icons.add),
         ),
-        body: Container(
-          color: Colors.black,
-          height: 300,
-          child: Row(children: [
-            Expanded(
-              child: Container(
-                color: Colors.amber,
-                height: 120,
-                width: 120,
+        body: Center(
+          child: Container(
+            padding: EdgeInsets.all(40),
+            width: 400,
+            height: 600,
+            color: Colors.black,
+            child: Stack(children: [
+              Positioned(
+                bottom: 0,
+                right: 0,
+                child: Container(
+                  color: Colors.green,
+                  width: 150,
+                  height: 190,
+                ),
               ),
-            ),
-            Expanded(
-              flex: 2,
-              child: Container(
-                color: Colors.blue,
-                height: 120,
-                width: 120,
+              Positioned(
+                top: 0,
+                left: 0,
+                child: Container(
+                  color: Colors.teal,
+                  width: 150,
+                  height: 190,
+                ),
               ),
-            ),
-            Expanded(
-              child: Container(
-                color: Colors.red,
-                height: 120,
-                width: 120,
+              Positioned(
+                left: 0,
+                bottom: 0,
+                child: Container(
+                  color: Colors.white,
+                  width: 150,
+                  height: 190,
+                ),
               ),
-            ),
-          ]),
+              Positioned(
+                right: 0,
+                top: 0,
+                child: Container(
+                  color: Colors.amber,
+                  width: 150,
+                  height: 190,
+                ),
+              ),
+              Positioned(
+                child: Center(
+                  child: Container(
+                    color: Colors.blue,
+                    width: 150,
+                    height: 190,
+                  ),
+                ),
+              ),
+            ]),
+          ),
         ),
       ),
     );
