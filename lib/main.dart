@@ -48,74 +48,41 @@ class MyApp extends StatelessWidget {
           onPressed: () {},
           child: Icon(Icons.add),
         ),
-        body: Center(
-          child: Container(
-            padding: EdgeInsets.all(90),
-            width: 400,
-            height: 600,
+        body: Column(children: [
+          Container(
+            //width: double.infinity,
+            //padding: EdgeInsets.all(90),
             color: Colors.black,
-            child: Center(
-              child: Wrap(
-                  spacing: 20,
-                  runSpacing: 10,
-                  direction: Axis.vertical,
-                  alignment: WrapAlignment.start,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        print('object1');
-                      },
-                      child: Text('data1'),
-                    ),
-                    ElevatedButton(
-                        onPressed: () {
-                          print('object2');
-                        },
-                        child: Text('data2')),
-                    ElevatedButton(
-                        onPressed: () {
-                          print('object3');
-                        },
-                        child: Text('data3')),
-                    ElevatedButton(
-                        onPressed: () {
-                          print('object4');
-                        },
-                        child: Text('data4')),
-                    ElevatedButton(
-                        onPressed: () {
-                          print('object5');
-                        },
-                        child: Text('data5')),
-                    ElevatedButton(
-                        onPressed: () {
-                          print('object6');
-                        },
-                        child: Text('data6')),
-                    ElevatedButton(
-                        onPressed: () {
-                          print('object6');
-                        },
-                        child: Text('data6')),
-                    ElevatedButton(
-                        onPressed: () {
-                          print('object6');
-                        },
-                        child: Text('data6')),
-                    ElevatedButton(
-                        onPressed: () {
-                          print('object6');
-                        },
-                        child: Text('data6')),
-                    ElevatedButton(
-                        onPressed: () {
-                          print('object6');
-                        },
-                        child: Text('data6')),
-                  ]),
+            child: Text(
+              'data on presd  hi mohamed hhhh hello world iam mohamed',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontFamily: 'my font',
+                  fontWeight: FontWeight.w500),
             ),
           ),
-        ),
+          Image.asset(
+            "assets/images/2021car.jpg",
+            fit: BoxFit.cover,
+            height: 300,
+            width: 400,
+          ),
+          Text(
+            "CAR",
+            style: TextStyle(fontFamily: 'my font', fontSize: 50),
+          ),
+          Image.network(
+            'https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1618602532707-3OAII3QVHYKCW3KJ1HJU/cars_boast.jpg',
+            fit: BoxFit.cover,
+            height: 200,
+            width: 500,
+            loadingBuilder: (context, child, progress) {
+              return progress == null ? child : CircularProgressIndicator();
+            },
+          ),
+          
+        ]),
       ),
     );
   }
