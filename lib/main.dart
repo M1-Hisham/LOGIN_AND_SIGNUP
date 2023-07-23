@@ -48,41 +48,38 @@ class MyApp extends StatelessWidget {
           onPressed: () {},
           child: Icon(Icons.add),
         ),
-        body: Column(children: [
-          Container(
-            //width: double.infinity,
-            //padding: EdgeInsets.all(90),
-            color: Colors.black,
-            child: Text(
-              'data on presd  hi mohamed hhhh hello world iam mohamed',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontFamily: 'my font',
-                  fontWeight: FontWeight.w500),
-            ),
-          ),
-          Image.asset(
-            "assets/images/2021car.jpg",
-            fit: BoxFit.cover,
-            height: 300,
-            width: 400,
-          ),
-          Text(
-            "CAR",
-            style: TextStyle(fontFamily: 'my font', fontSize: 50),
-          ),
-          Image.network(
-            'https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1618602532707-3OAII3QVHYKCW3KJ1HJU/cars_boast.jpg',
-            fit: BoxFit.cover,
-            height: 200,
-            width: 500,
-            loadingBuilder: (context, child, progress) {
-              return progress == null ? child : CircularProgressIndicator();
-            },
-          ),
-          
-        ]),
+        body: Padding(
+          padding: const EdgeInsets.only(top: 25, bottom: 50),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Center(
+                  child: Text(
+                    "HELLO",
+                    style: TextStyle(
+                        fontFamily: "my font",
+                        fontSize: 50,
+                        color: Colors.blue),
+                  ),
+                ),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Image.asset(
+                        'assets/images/facebook.png',
+                        height: 110,
+                      ),
+                      Image.asset(
+                        'assets/images/insta.png',
+                        height: 110,
+                      ),
+                      Image.asset(
+                        'assets/images/twitter.png',
+                        height: 110,
+                      ),
+                    ]),
+              ]),
+        ),
       ),
     );
   }
