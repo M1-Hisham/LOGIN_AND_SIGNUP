@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import '../constant/colors/colors.dart';
 import '../widget/elevated_button.dart';
 
@@ -24,7 +23,7 @@ class SignupScreen extends StatelessWidget {
               child: Align(
                 alignment: Alignment.topCenter,
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 20, bottom: 30),
+                  padding: const EdgeInsets.only(top: 20),
                   child: Text(
                     'SIGNUP',
                     style: TextStyle(
@@ -39,7 +38,7 @@ class SignupScreen extends StatelessWidget {
             ),
             SvgPicture.asset('assets/images/signup.svg'),
             const SizedBox(
-              height: 30,
+              height: 10,
             ),
             Container(
               width: 250,
@@ -86,7 +85,7 @@ class SignupScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 5, bottom: 10),
+              padding: const EdgeInsets.only(top: 5),
               child: Button(
                 name: '/',
                 text: 'SIGNUP',

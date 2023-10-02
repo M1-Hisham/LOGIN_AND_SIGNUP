@@ -11,11 +11,10 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(214, 255, 255, 255),
-      body: SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(parent: ScrollPhysics()),
-        child: SizedBox(
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
+      body: SizedBox(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        child: SingleChildScrollView(
           child: Stack(children: [
             Positioned(
               child: Image.asset('assets/images/main_top.png'),
@@ -30,7 +29,7 @@ class LoginScreen extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.topCenter,
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 20, bottom: 30),
+                    padding: const EdgeInsets.only(top: 20, bottom: 10),
                     child: Text(
                       'LOGIN',
                       style: TextStyle(
@@ -45,7 +44,7 @@ class LoginScreen extends StatelessWidget {
               ),
               SvgPicture.asset('assets/images/login.svg'),
               SizedBox(
-                height: 30,
+                height: 10,
               ),
               Container(
                 width: 250,
@@ -67,7 +66,7 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 20),
+                margin: EdgeInsets.symmetric(vertical: 15),
                 //padding: EdgeInsets.symmetric(horizontal: 30),
                 width: 250,
                 padding: EdgeInsets.only(left: 30),
@@ -92,7 +91,7 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 10, bottom: 10),
+                padding: const EdgeInsets.only(top: 10),
                 child: Button(
                   name: '/login',
                   text: 'LOGIN',

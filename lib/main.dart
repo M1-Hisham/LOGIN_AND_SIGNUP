@@ -2,7 +2,6 @@
 
 import 'package:facebook_app/screens/login_screen.dart';
 import 'package:flutter/material.dart';
-
 import 'screens/signup_screen.dart';
 import 'screens/welcome_screen.dart';
 
